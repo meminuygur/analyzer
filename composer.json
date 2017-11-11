@@ -1,0 +1,24 @@
+{
+    "name": "meminuygur/analyzer",
+    "description": "Phrase Analyzer.",
+    "keywords": ["template", "composer", "package"],
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Mehmet Emin Uygur",
+            "email": "meminuygur@yandex.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Meminuygur\\Analyzer\\": "src/"
+        }
+    }
+}
