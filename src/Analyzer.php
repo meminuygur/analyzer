@@ -23,7 +23,7 @@ Class Analyzer{
 
         } else{
 
-            throw new Exception('Phrase cannot be over 255');
+            throw new \Exception('Phrase cannot be over 255');
 
         }
 
@@ -90,7 +90,10 @@ Class Analyzer{
 
             if( $key < count($this->phrase_array)-1 ) {
 
-                $before_chars[] = $this->phrase_array[$key+1];
+                // Dont include spaces
+                if (trim($this->phrase_array[$key + 1]) != '') {
+                    $before_chars[] = $this->phrase_array[$key + 1];
+                }
 
             }
 
@@ -115,7 +118,10 @@ Class Analyzer{
 
             if( $key > 0 ) {
 
-                $after_chars[] = $this->phrase_array[$key-1];
+                // Dont include spaces
+                if (trim($this->phrase_array[$key - 1]) != '') {
+                    $after_chars[] = $this->phrase_array[$key - 1];
+                }
 
             }
 
