@@ -11,10 +11,15 @@ class AnalyzerTest extends PHPUnit_Framework_TestCase
 {
 
 
-    public function testIsThereAnySyntaxError(){
-        $var = new Meminuygur\Analyzer\Analyzer();
-        $this->assertTrue(is_object($var));
-        unset($var);
+    public function testAfterCharsValid()
+    {
+
+        $text = 'football vs soccer';
+        $letter = 'f';
+        $analyzer = new Meminuygur\Analyzer\Analyzer();
+        $analyzer->setPhrase($text);
+        $this->assertTrue($analyzer->getAfterChars($letter) == array('o'));
+        //unset($var);
     }
 
 
